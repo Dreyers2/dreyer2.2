@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Currículo de Rudolfo Leonardo Dreyer, Desenvolvedor Web com experiência em HTML, CSS, JavaScript e React.js.">
+    <title>Currículo - Rudolfo Leonardo Dreyer</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+        body {
+            font-family: 'Helvetica Neue', Arial, sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+            color: #333;
+        }
+        header {
+            background: linear-gradient(135deg, #2980b9, #1b6a8c);
+            color: #fff;
+            padding: 20px 0;
+            text-align: center;
+        }
+        header img {
+            height: 150px;
+            width: 150px;
+            border-radius: 50%;
+            border: 5px solid #fff;
+            object-fit: cover;
+            margin-bottom: 15px;
+        }
+        header h1 {
+            margin: 0;
+            font-size: 2.5em;
+        }
+        .contact-info {
+            font-size: 1.1em;
+        }
+        .contact-info p {
+            margin: 5px 0;
+        }
+        .contact-info p i {
+            margin-right: 10px;
+        }
+        .tab {
+            display: flex;
+            justify-content: center;
+            margin-top: 20px;
+            flex-wrap: wrap;
+        }
+        .tab button {
+            background-color: #2980b9;
+            color: white;
+            border: none;
+            padding: 12px 25px;
+            cursor: pointer;
+            font-size: 1.1em;
+            margin-right: 10px;
+            border-radius: 5px;
+            transition: background-color 0.3s, transform 0.3s;
+        }
+        .tab button:hover, .tab button.active {
+            background-color: #1b6a8c;
+            transform: translateY(-2px);
+        }
+        .tabcontent {
+            display: none;
+            padding: 20px;
+            background: #fff;
+            border-radius: 15px;
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+            margin-top: 20px;
+        }
+        .tabcontent.active {
+            display: block;
+        }
+        section {
+            margin: 20px 0;
+            border-radius: 15px;
+            background: #ffffff;
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+            padding: 20px;
+        }
+        h2 {
+            font-size: 2em;
+            color: #2980b9;
+            border-bottom: 2px solid #2980b9;
+            padding-bottom: 10px;
+            margin-bottom: 20px;
+        }
+        .experience, .education, .skills {
+            margin-bottom: 20px;
+        }
+        ul {
+            list-style-type: disc;
+            margin-left: 20px;
+        }
+        ul li {
+            margin-bottom: 10px;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 10px;
+        }
+        table, th, td {
+            border: 1px solid #ddd;
+            padding: 10px;
+            text-align: left;
+        }
+        th {
+            background-color: #2980b9;
+            color: #fff;
+        }
+        td {
+            background-color: #f9f9f9;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <img src="c:/users/Rodolfo/downloads/img_7690.jpg" alt="Foto de Rudolfo Leonardo Dreyer, Desenvolvedor Web">
+        <h1>Rudolfo Leonardo Dreyer</h1>
+        <div class="contact-info">
+            <p><i class="fas fa-envelope"></i>Email: rudolfo33333@gmail.com</p>
+            <p><i class="fas fa-phone"></i>Telefone: +258 87 525 9279 / 84 013 7108</p>
+            <p><i class="fas fa-map-marker-alt"></i>Endereço: Rua da Escola, Djuba, Maputo, Moçambique</p>
+        </div>
+    </header>
+
+    <div class="tab">
+        <button class="tablinks" onclick="openTab(event, 'resumo')" id="defaultOpen"><i class="fas fa-user"></i>Resumo Profissional</button>
+        <button class="tablinks" onclick="openTab(event, 'experiencia')"><i class="fas fa-briefcase"></i>Experiência Profissional</button>
+        <button class="tablinks" onclick="openTab(event, 'educacao')"><i class="fas fa-graduation-cap"></i>Educação</button>
+        <button class="tablinks" onclick="openTab(event, 'habilidades')"><i class="fas fa-tools"></i>Habilidades Técnicas</button>
+        <button class="tablinks" onclick="openTab(event, 'idiomas')"><i class="fas fa-language"></i>Idiomas</button>
+    </div>
+
+    <div id="resumo" class="tabcontent">
+        <section>
+            <h2>Resumo Profissional</h2>
+            <p>Experiência em desenvolvimento web, com conhecimento em HTML, CSS e JavaScript. Capaz de criar interfaces responsivas e amigáveis ao usuário, com foco em desempenho e acessibilidade.</p>
+        </section>
+    </div>
+
+    <div id="experiencia" class="tabcontent">
+        <section>
+            <h2>Experiência Profissional</h2>
+            <div class="experience">
+                <h3>Desenvolvedor Web - Empresa Dreyer Ltd</h3>
+                <p><strong>Janeiro 2022 - Presente</strong></p>
+                <ul>
+                    <li>Desenvolvimento e manutenção de websites utilizando HTML, CSS, JavaScript e frameworks como React.js.</li>
+                    <li>Colaboração com designers e outros desenvolvedores para criar interfaces intuitivas e responsivas.</li>
+                    <li>Otimização de websites para melhorar o desempenho e a experiência do usuário.</li>
+                </ul>
+            </div>
+            <div class="experience">
+                <h3>Estagiário em Desenvolvimento Web - Empresa INCM</h3>
+                <p><strong>Junho 2021 - Dezembro 2021</strong></p>
+                <ul>
+                    <li>Auxílio no desenvolvimento de websites e aplicações web.</li>
+                    <li>Participação em reuniões de planejamento de projetos.</li>
+                    <li>Testes e depuração de código.</li>
+                </ul>
+            </div>
+        </section>
+    </div>
+
+    <div id="educacao" class="tabcontent">
+        <section>
+            <h2>Educação</h2>
+            <div class="education">
+                <h3>7a Classe - Colégio Aboobacar Sidik (RTA) - 2017</h3>
+                <h3>10a Classe - Colégio Aboobacar Sidik (RTA) - 2020</h3>
+                <h3>CV3 - Eletricidade Industrial - Instituto de Transportes e Comunicações - 2021</h3>
+                <p><strong>2017 - 2021</strong></p>
+            </div>
+        </section>
+    </div>
+
+    <div id="habilidades" class="tabcontent">
+        <section>
+            <h2>Habilidades Técnicas</h2>
+            <div class="skills">
+                <ul>
+                    <li><i class="fas fa-code"></i> HTML, CSS, JavaScript</li>
+                    <li><i class="fas fa-git"></i> Git, GitHub</li>
+                    <li><i class="fas fa-file-excel"></i> Word, Excel, PowerPoint</li>
+                    <li><i class="fas fa-robot"></i>Inteligência Artificial</li>
+                </ul>
+            </div>
+        </section>
+    </div>
+
+    <div id="idiomas" class="tabcontent">
+        <section>
+            <h2>Idiomas</h2>
+            <table>
+                <tr>
+                    <th><i class="fas fa-language"></i> Idioma</th>
+                    <th><i class="fas fa-star"></i> Nível</th>
+                </tr>
+                <tr>
+                    <td>Português</td>
+                    <td>Nativo</td>
+                </tr>
+                <tr>
+                    <td>Inglês</td>
+                    <td>Básico</td>
+                </tr>
+                <tr>
+                    <td>Changana</td>
+                    <td>Básico</td>
+                </tr>
+            </table>
+        </section>
+    </div>
+
+    <script>
+        function openTab(evt, tabName) {
+            var i, tabcontent, tablinks;
+            tabcontent = document.getElementsByClassName("tabcontent");
+            for (i = 0; i < tabcontent.length; i++) {
+                tabcontent[i].style.display = "none";
+            }
+            tablinks = document.getElementsByClassName("tablinks");
+            for (i = 0; i < tablinks.length; i++) {
+                tablinks[i].className = tablinks[i].className.replace(" active", "");
+            }
+            document.getElementById(tabName).style.display = "block";
+            evt.currentTarget.className += " active";
+        }
+        document.getElementById("defaultOpen").click();
+    </script>
+
+</body>
+</html> 

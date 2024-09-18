@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Galeria de Imagens com Efeito Hover</title>
+    <style>
+        /* Estilo da galeria */
+        .galeria {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            justify-content: center;
+            padding: 20px;
+        }
+
+        /* Estilo das imagens */
+        .galeria img {
+            width: 200px;
+            height: 150px;
+            object-fit: cover;
+            transition: transform 0.3s ease;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+
+        /* Efeito de zoom */
+        .galeria img:hover {
+            transform: scale(1.1);
+        }
+    </style>
+</head>
+<body>
+
+    <h1 style="text-align: center;">Galeria de Imagens</h1>
+
+    <div class="galeria">
+        <img src="c:/users/rodolfo/downloads/ssj1.jpg" alt="Imagem 1">
+        <img src="c:/users/rodolfo/downloads/ssj2.jpg" alt="Imagem 2">
+        <img src="c:/users/rodolfo/downloads/ssj3.jpg" alt="Imagem 3">
+        <img src="c:/users/rodolfo/downloads/ssj4.jpg" alt="Imagem 4">
+        <img src="c:/users/rodolfo/downloads/ssj god.jpg" alt="Imagem 5">
+        <img src="c:/users/rodolfo/downloads/ssj god blue.jpg" alt="Imagem 6">
+    </div>
+
+</body>
+</html>

@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfólio Responsivo</title>
+    <style>
+
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+
+        h1 {
+            text-align: center;
+            padding: 20px 0;
+            margin: 0;
+            background-color: #333;
+            color: white;
+        }
+
+        .portfolio-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 20px;
+            padding: 20px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .portfolio-item {
+            background-color: rgb(255, 255, 255);
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .portfolio-item img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+        }
+
+        .portfolio-item-content {
+            padding: 15px;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            flex-grow: 1;
+        }
+
+        .portfolio-item h2 {
+            font-size: 1.5em;
+            margin: 0 0 10px;
+        }
+
+        .portfolio-item p {
+            flex-grow: 1;
+        }
+
+        .portfolio-item:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+        }
+
+        @media (max-width: 600px) {
+            h1 {
+                font-size: 1.5em;
+                padding: 15px 0;
+            }
+
+            .portfolio-item img {
+                height: 150px;
+            }
+
+            .portfolio-item h2 {
+                font-size: 1.2em;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Meu Portfólio</h1>
+
+    <div class="portfolio-container">
+        <div class="portfolio-item">
+            <img src="c:/Users/Rodolfo/Downloads/123.png" alt="Projeto 1">
+            <div class="portfolio-item-content">
+                <h2> Site de Comércio Eletrônico</h2>
+                <p>Desenvolvi um site de comércio eletrônico completo, com funcionalidades de carrinho de compras, processamento de pagamentos e sistema de gerenciamento de produtos. Usei HTML, CSS, JavaScript, e PHP para a implementação, e MySQL para o banco de dados.</p>
+            </div>
+        </div>
+        <div class="portfolio-item">
+            <img src="c:/Users/Rodolfo/Downloads/1234.jpg" alt="Projeto 2">
+            <div class="portfolio-item-content">
+                <h2>Aplicativo de Lista de Tarefas</h2>
+                <p>Criei um aplicativo de lista de tarefas para ajudar os usuários a organizar suas atividades diárias. O aplicativo permite adicionar, editar e excluir tarefas, além de marcar tarefas como concluídas. Utilizei React para a interface e Node.js para o backend.</p>
+            </div>
+        </div>
+        <div class="portfolio-item">
+            <img src="c:/Users/Rodolfo/Downloads/12345.jpg" alt="Projeto 3">
+            <div class="portfolio-item-content">
+                <h2>Blog Pessoal</h2>
+                <p>Desenvolvi um blog pessoal com um sistema de gerenciamento de conteúdo (CMS) personalizado, onde os usuários podem criar e editar posts, adicionar comentários, e gerenciar categorias. A interface foi criada com HTML, CSS, e JavaScript, enquanto o backend foi feito com Django.</p>
+            </div>
+        </div>
+        <div class="portfolio-item">
+            <img src="c:/Users/Rodolfo/Downloads/123456.jpg" alt="Projeto 4">
+            <div class="portfolio-item-content">
+                <h2>Dashboard de Análise de Dados</h2>
+                <p>Criei um dashboard interativo para análise de dados financeiros, utilizando gráficos e tabelas dinâmicas. O projeto foi construído com Python e Flask, e os dados são visualizados com a biblioteca Plotly. A interface é responsiva e se adapta a diferentes dispositivos.</p>
+            </div>
+        </div>
+    </div>
+
+</body>
+</html>

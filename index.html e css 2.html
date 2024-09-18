@@ -1,0 +1,464 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfólio de Rudolfo Leo Dreyer</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+         body {
+            margin: 0;
+            font-family: 'Arial', sans-serif;
+            background-color: #111;
+            color: #fff;
+        }
+
+        header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px 50px;
+            background-color: #222;
+        }
+
+        @keyframes zoom {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.2); }
+    100% { transform: scale(1); }
+}
+
+.logo {
+    font-size: 24px;
+    font-weight: bold;
+    animation: zoom 2s infinite;
+    color:#028ab3;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+
+        nav ul {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            gap: 20px;
+        }
+
+        nav ul li a {
+            color: #fff;
+            text-decoration: none;
+            font-size: 16px;
+            transition: color 0.3s;
+        }
+
+        nav ul li a:hover {
+            color: #028ab3;
+        }
+
+        .section {
+            display: none;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 15px rgba(0, 0, 0, 0.3);
+            background-color: #222;
+            margin: 20px;
+        }
+
+        #bg-video {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: -1;
+}
+
+body, .section {
+    position: relative;
+    z-index: 1;
+}
+
+header {
+    position: relative;
+    z-index: 2;
+}
+
+.main-content {
+    padding-top: 80px;
+}
+
+
+        .section.active {
+            display: block;
+        }
+
+        .main-content {
+            text-align: center;
+            padding: 100px 20px;
+            background: url('background.jpg') no-repeat center center/cover;
+        }
+
+        .profile-pic img {
+            border-radius: 50%;
+            border: 5px solid #028ab3;
+            width: 150px;
+            height: 150px;
+        }
+
+        h1 {
+            font-size: 36px;
+            margin: 20px 0;
+        }
+
+        h2 {
+            font-size: 18px;
+            margin-bottom: 30px;
+        }
+
+        .social-links {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+        }
+
+        .social-links a img {
+            width: 40px;
+            height: 40px;
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+
+        .social-links a img:hover {
+            transform: scale(1.1);
+        }
+
+        .social-links a.facebook img,
+        .social-links a.twitter img,
+        .social-links a.discord img,
+        .social-links a.instagram img {
+            width: 30px;  
+            height: 30px;
+        }
+
+        .social-links a.gmail img:hover,
+        .social-links a.facebook img:hover,
+        .social-links a.twitter img:hover,
+        .social-links a.discord img:hover,
+        .social-links a.instagram img:hover {
+            box-shadow: 0 0 15px #00f, 0 0 30px #00f, 0 0 45px #00f;
+        }
+
+        .experience, .education, .skills, .languages, .contact-info, .portfolio {
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+            padding: 20px;
+            margin-bottom: 20px;
+            background-color: #333;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+
+        table, th, td {
+            border: 1px solid #028ab3;
+        }
+
+        th, td {
+            padding: 10px;
+            text-align: left;
+        }
+
+        th {
+            background-color: #222;
+        }
+
+        .portfolio {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+            gap: 20px;
+            margin: 0 auto;
+            max-width: 1200px;
+        }
+
+        .project {
+            position: relative;
+            overflow: hidden;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+        }
+
+        .project img {
+            width: 100%;
+            height: auto;
+            display: block;
+            border-radius: 10px;
+            transition: transform 0.3s;
+        }
+
+        .project img:hover {
+            transform: scale(1.05);
+        }
+
+        .project-info {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            background: rgba(0, 0, 0, 0.6);
+            color: #fff;
+            padding: 10px;
+            text-align: center;
+        }
+
+        .project-info h3 {
+            margin: 0;
+            font-size: 18px;
+        }
+
+        .project-info p {
+            margin: 5px 0 0;
+            font-size: 14px;
+        }
+
+        .technologies {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 15px;
+            justify-content: center;
+        }
+
+        .technology {
+            background-color: #444;
+            padding: 10px 15px;
+            border-radius: 5px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .technology i {
+            color: #028ab3;
+        }
+
+        .technology span {
+            font-size: 14px;
+        }
+
+        .contact-info {
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+            padding: 20px;
+            background-color: #333;
+            margin: 20px auto;
+            max-width: 600px;
+            text-align: left;
+        }
+
+        .contact-info p {
+            margin: 10px 0;
+            font-size: 16px;
+        }
+
+        .contact-info i {
+            color: #028ab3;
+            margin-right: 10px;
+        }
+    </style>
+    
+    <script>
+        function showSection(sectionId) {
+            document.querySelectorAll('.section').forEach(function(section) {
+                section.classList.remove('active');
+            });
+            document.getElementById(sectionId).classList.add('active');
+        }
+        
+        document.addEventListener('DOMContentLoaded', function() {
+            showSection('home');
+        });
+    </script>
+</head>
+<body>
+    <header>
+        <div class="logo">Dreyer</div>
+        <nav>
+            <ul>
+                <li><a href="#" onclick="showSection('home')">Início</a></li>
+                <li><a href="#" onclick="showSection('about')">Sobre Mim</a></li>
+                <li><a href="#" onclick="showSection('resume')">Curriculum</a></li>
+                <li><a href="#" onclick="showSection('portfolio')">Portfólio</a></li>
+                <li><a href="#" onclick="showSection('contact')">Contacto</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section id="home" class="main-content section">
+    <video autoplay muted loop id="bg-video">
+        <source src="c:/Users/Rodolfo/3D Objects/epah ja cansei/555.mp4" type="video/mp4">
+    </video>
+    <div class="content-container">
+        <div class="profile-pic">
+            <img src="c:/users/Rodolfo/downloads/img_7690.jpg" alt="Foto de Dreyaaa">
+        </div>
+        <div class="profile-info">
+            <h1>Rudolfo Leo Dreyer</h1>
+            <h2>Não bebe, nem fuma só quer mamas!!!</h2>
+            <h3>DEV junior</h3>
+            <div class="social-links">
+                <a href="https://www.facebook.com/profile.php?id=100074218326298&mibextid=LQQJ4d" class="facebook" target="_blank"><img src="c:/Users/Rodolfo/3D Objects/epah ja cansei/fb.png" alt="Facebook"></a>
+                <a href="https://x.com/dreyers2__" class="twitter" target="_blank"><img src="c:/Users/Rodolfo/3D Objects/epah ja cansei/tt.png" alt="exi"></a>
+                <a href="https://discord.com" class="discord" target="_blank"><img src="c:/Users/Rodolfo/3D Objects/epah ja cansei/dc.png" alt="Discord"></a>
+                <a href="https://www.instagram.com/dreyer.s2?igsh=MTducnJ0c3BodWZiNw%3D%3D&utm_source=qr" class="instagram" target="_blank"><img src="c:/Users/Rodolfo/3D Objects/epah ja cansei/ig.png" alt="Instagram"></a>
+            </div>
+        </div>
+    </div>
+</section>
+
+    <section id="about" class="section">
+        <div class="about-container" style="text-align: center; background-color: #333; padding: 50px; border-radius: 10px;">
+            <h2 style="color: #028ab3;">Sobre Mim</h2>
+            <img src="c:/Users/Rodolfo/3D Objects/epah ja cansei/tawas.jpg" alt="Sua Foto" class="about-img" style="width: 150px; border-radius: 50%; margin-bottom: 20px;">
+            <p style="font-size: 18px; color: #ffffff;">Sou Rudolfo Leonardo Dreyer, desenvolvedor web de Moçambique, apaixonado por tecnologia e pela criação de experiências digitais que impactam positivamente o mundo. Meu foco é sempre a inovação e melhoria contínua, buscando ser o melhor na área de informática.</p>
+            
+            <div class="about-pics" style="margin: 20px 0;">
+                <img src="caminho/foto1.jpg" alt="Foto Rudolfo Trabalhando" style="width: 120px; margin: 10px; border-radius: 10px;">
+                <img src="caminho/foto2.jpg" alt="Foto Rudolfo com Equipe" style="width: 120px; margin: 10px; border-radius: 10px;">
+            </div>
+            
+            <a href="#contact" class="btn-fale-comigo" style="background-color: #028ab3; color: white; padding: 10px 20px; border-radius: 5px; text-decoration: none; font-size: 18px; transition: background-color 0.3s;">Fale Comigo</a>
+        </div>
+    </section>
+    
+
+    <section id="resume" class="section">
+        <div id="experiencia" class="experience">
+            <h2>Experiência Profissional</h2>
+            <div class="experience">
+                <h3>Desenvolvedor Web - Empresa Dreyer Ltd</h3>
+                <p><strong>Janeiro 2022 - Presente</strong></p>
+                <ul>
+                    <li>Desenvolvimento e manutenção de websites utilizando HTML, CSS, JavaScript e frameworks como React.js.</li>
+                    <li>Colaboração com designers e outros desenvolvedores para criar interfaces intuitivas e responsivas.</li>
+                    <li>Otimização de websites para melhorar o desempenho e a experiência do usuário.</li>
+                </ul>
+            </div>
+            <div class="experience">
+                <h3>Estagiário em Desenvolvimento Web - Empresa INCM</h3>
+                <p><strong>Junho 2021 - Dezembro 2021</strong></p>
+                <ul>
+                    <li>Auxílio no desenvolvimento de websites e aplicações web.</li>
+                    <li>Participação em reuniões de planejamento de projetos.</li>
+                    <li>Testes e depuração de código.</li>
+                </ul>
+            </div>
+        </div>
+
+        <div id="educacao" class="education">
+            <h2>Educação</h2>
+            <div>
+                <h3>7a Classe - Colégio Aboobacar Sidik (RTA) - 2017</h3>
+                <h3>10a Classe - Colégio Aboobacar Sidik (RTA) - 2020</h3>
+                <h3>CV3 - Eletricidade Industrial - Instituto de Transportes e Comunicações - 2021</h3>
+                <p><strong>2017 - 2021</strong></p>
+            </div>
+        </div>
+
+        <div id="habilidades" class="skills">
+            <h2>Habilidades Técnicas</h2>
+            <div>
+                <ul>
+                    <li><i class="fas fa-code"></i> HTML, CSS, JavaScript</li>
+                    <li><i class="fas fa-git"></i> Git, GitHub</li>
+                    <li><i class="fas fa-file-excel"></i> Word, Excel, PowerPoint</li>
+                    <li><i class="fas fa-robot"></i> Inteligência Artificial</li>
+                </ul>
+            </div>
+        </div>
+
+        <div id="idiomas" class="languages">
+            <h2>Idiomas</h2>
+            <table>
+                <tr>
+                    <th><i class="fas fa-language"></i> Idioma</th>
+                    <th><i class="fas fa-star"></i> Nível</th>
+                </tr>
+                <tr>
+                    <td>Português</td>
+                    <td>Nativo</td>
+                </tr>
+                <tr>
+                    <td>Inglês</td>
+                    <td>Básico</td>
+                </tr>
+                <tr>
+                    <td>Changana</td>
+                    <td>Básico</td>
+                </tr>
+            </table>
+        </div>
+    </section>
+
+    <section id="portfolio" class="section">
+        <h2>Portfólio</h2>
+        <div class="portfolio">
+            <div class="project">
+                <img src="c:/Users/Rodolfo/Downloads/123.png" alt="Projeto 1">
+                <div class="project-info">
+                    <h3>Site de Comércio Eletrônico</h3>
+                    <p>Um site completo de comércio eletrônico desenvolvido com HTML, CSS e JavaScript.</p>
+                </div>
+            </div>
+    
+            <div class="project">
+                <img src="c:/Users/Rodolfo/Downloads/12345.jpg" alt="Projeto 2">
+                <div class="project-info">
+                    <h3>Blog Pessoal do Leo Dreyer</h3>
+                    <p>Blog responsivo desenvolvido com HTML5 e CSS3, com layout adaptável.</p>
+                </div>
+            </div>
+    
+            <div class="project">
+                <img src="c:/Users/Rodolfo/Downloads/1234.jpg" alt="Projeto 3">
+                <div class="project-info">
+                    <h3>Aplicação de Tarefas v.122.1</h3>
+                    <p>Aplicação de lista de tarefas com interatividade em JavaScript.</p>
+                </div>
+            </div>
+    
+            <div class="project">
+                <img src="c:/Users/Rodolfo/3D Objects/epah ja cansei/euu.png" alt="Projeto 4">
+                <div class="project-info">
+                    <h3>Portfolio Pessoal do Dreyer</h3>
+                    <p>Portfólio criado com HTML, CSS, e JavaScript, destacando meus projetos e habilidades.</p>
+                </div>
+            </div>
+    
+            <div class="project">
+                <img src="c:/Users/Rodolfo/Downloads/123.png" alt="Projeto 5">
+                <div class="project-info">
+                    <h3>Loja Virtual do Leo Dreyer</h3>
+                    <p>Desenvolvimento de uma loja virtual com funcionalidades de carrinho e checkout.</p>
+                </div>
+            </div>
+        </div>
+        <h2>Tecnologias Usadas:</h2>
+        <div class="technologies">
+            <div class="technology"><i class="fab fa-html5"></i> <span>HTML5</span></div>
+            <div class="technology"><i class="fab fa-css3-alt"></i> <span>CSS3</span></div>
+            <div class="technology"><i class="fab fa-js"></i> <span>JavaScript</span></div>
+    </section>
+    </section>   
+
+
+    <section id="contact" class="section">
+        <h2>Contacto</h2>
+        <div class="contact-info">
+            <p><i class="fas fa-envelope"></i>Email: rudolfo33333@gmail.com</p>
+            <p><i class="fas fa-phone"></i>Telefone: +258 87 525 9279 / 84 013 7108</p>
+            <p><i class="fas fa-map-marker-alt"></i>Endereço: Rua da Escola, Djuba, Maputo, Moçambique</p>
+        </div>
+    </section>
+</body>
+</html>
